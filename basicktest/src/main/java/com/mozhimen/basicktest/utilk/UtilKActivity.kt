@@ -3,9 +3,12 @@ package com.mozhimen.basicktest.utilk
 import android.os.Bundle
 import android.view.View
 import com.mozhimen.basick.elemk.activity.bases.BaseActivityVB
+import com.mozhimen.basick.utilk.app.UtilKApk
 import com.mozhimen.basick.utilk.exts.start
 import com.mozhimen.basick.utilk.jetpack.lifecycle.UtilKDataBus
 import com.mozhimen.basicktest.databinding.ActivityUtilkBinding
+import com.mozhimen.basicktest.utilk.app.UtilKApkActivity
+import com.mozhimen.basicktest.utilk.content.UtilKContentActivity
 import com.mozhimen.basicktest.utilk.content.UtilKIntentActivity
 import com.mozhimen.basicktest.utilk.graphics.UtilKBitmapActivity
 import com.mozhimen.basicktest.utilk.java.UtilKEncryptActivity
@@ -22,8 +25,12 @@ class UtilKActivity : BaseActivityVB<ActivityUtilkBinding>() {
         super.initData(savedInstanceState)
     }
 
-    fun goUtilKIntent(view: View) {
-        start<UtilKIntentActivity>()
+    fun goUtilKApk(view: View) {
+        start<UtilKApkActivity>()
+    }
+
+    fun goUtilKContent(view: View) {
+        start<UtilKContentActivity>()
     }
 
     fun goUtilKBitmap(view: View) {
